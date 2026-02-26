@@ -11,6 +11,7 @@ This project focuses on clean separation of concerns, scalability, and reusable 
 <p align="center">
   <img src="images/options2.png" width="900"/>
 </p>
+
 ---
 
 ## 🎯 Design Goals
