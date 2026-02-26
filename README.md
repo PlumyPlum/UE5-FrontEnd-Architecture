@@ -1,16 +1,16 @@
 # UE5 Front-End Architecture Framework
 
+<p align="center">
+  <img src="./images/options1.png" width="900">
+</p>
+
+<p align="center">
+  <img src="./images/options2.png" width="900">
+</p>
+
 A modular, C++-driven front-end UI architecture built for Unreal Engine 5.
 
 This project focuses on clean separation of concerns, scalability, and reusable UI systems rather than visual asset presentation. It demonstrates a structured approach to building maintainable game front-end systems using UMG, Subsystems, and Gameplay Tags.
-
-<p align="center">
-  <img src="images/options1.png" width="900"/>
-</p>
-
-<p align="center">
-  <img src="images/options2.png" width="900"/>
-</p>
 
 ---
 
