@@ -8,86 +8,109 @@
   <img src="./images/options2.png" width="900">
 </p>
 
-A modular, C++-driven front-end UI architecture built for Unreal Engine 5.
+---
 
-This project focuses on clean separation of concerns, scalability, and reusable UI systems rather than visual asset presentation. It demonstrates a structured approach to building maintainable game front-end systems using UMG, Subsystems, and Gameplay Tags.
+## Overview
+
+A modular, C++-driven front-end UI architecture built for **Unreal Engine 5**.
+
+This project demonstrates a structured and scalable approach to building maintainable game front-end systems using:
+
+- UMG
+- Subsystems
+- Gameplay Tags
+- Data-driven configuration patterns
+
+The focus is architectural design and separation of concerns — not asset delivery.
 
 ---
 
-## 🎯 Design Goals
+## Design Philosophy
 
-- Decouple UI logic from gameplay systems
-- Promote reusable widget abstractions
-- Support scalable menu flows
-- Centralize state management
-- Enable data-driven options architecture
-- Provide clean controller-to-widget communication
+Modern game UI should be:
+
+- Modular
+- Reusable
+- Data-driven
+- Decoupled from gameplay systems
+- Scalable across multiple projects
+
+This framework was designed to support those principles.
 
 ---
 
-## 🏗 Architecture Overview
+## Architectural Layers
 
-### Core Layers
+### 1. Subsystem Layer
 
-**GameInstance / Subsystem Layer**
-- `FrontEndUISubsystem`
+**FrontEndUISubsystem**
+
 - Centralized UI state coordination
-- Lifecycle management for screens
+- Screen lifecycle management
+- Persistent front-end control layer
+- Decouples UI orchestration from gameplay logic
 
-**Controller Layer**
-- `FrontEndPlayerController`
-- Input routing and screen transitions
+---
 
-**Widget Abstraction Layer**
+### 2. Controller Layer
+
+**FrontEndPlayerController**
+
+- Input routing
+- Screen transitions
+- User interaction flow control
+- Communication bridge between systems and widgets
+
+---
+
+### 3. Widget Abstraction Layer
+
+Core layout and activatable widgets:
+
 - `Widget_PrimaryLayout`
 - `Widget_ConfirmScreen`
 - `Widget_ActivatableBase`
 - Component-based common widgets
 
-**Options System**
-- Data-driven configuration
+These serve as structured UI building blocks rather than one-off Blueprints.
+
+---
+
+### 4. Data-Driven Options System
+
+A scalable configuration architecture built around:
+
 - `ListDataObject_*` abstractions
 - Registry-based option handling
-- Scalable entry mapping
+- Entry widget mapping
+- Structured type definitions
 
-**Common UI Components**
+This allows UI configuration to scale without hardcoding behavior into widgets.
+
+---
+
+### 5. Common UI Components
+
+Reusable UI components including:
+
 - `FrontEndCommonButtonBase`
 - `FrontEndCommonListView`
 - `FrontEndCommonRotator`
 - Tab and list widget bases
 
+These provide consistent interaction patterns across screens.
+
 ---
 
-## 🧠 Architectural Principles
+## Architectural Principles
 
-- Composition over inheritance where possible
-- Explicit subsystem ownership
-- Data objects for UI-driven configuration
+- Separation of concerns between logic and presentation
+- Composition over inheritance where appropriate
 - Strong typing via structured data types
-- Minimal coupling between view and logic layers
+- Explicit ownership via subsystems
+- Minimal coupling between UI and game systems
+- Reusability across multiple projects
 
 ---
 
-## 📂 Repository Structure
-
-Content assets are intentionally excluded in this portfolio build to focus on architectural design rather than asset delivery.
-
----
-
-## 🛠 Technologies Used
-
-- Unreal Engine 5
-- C++
-- UMG
-- Gameplay Tags
-- Subsystems Architecture
-
----
-
-## 📌 Purpose
-
-This repository serves as a portfolio demonstration of modular front-end architecture patterns in Unreal Engine rather than a full playable demo.
-
----
-
-MIT License
+## Repository Structure
